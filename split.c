@@ -9,19 +9,19 @@ long parse(char* count )
 {
 
 long val = 1;
-if ( count[strlen(count) - 1 ] == 75 ||  count[strlen(count) - 1 ] == 107 )
+if ( count[strlen(count) - 1 ] == 75 ||  count[strlen(count) - 1 ] == 107 )   //K or k prefix
   {
-    count[strlen(count) - 1  ] = 0;
+    count[strlen(count) - 1  ] = 0;        //set prefix element to be null so value isn't affected
     val = 1000;
   }
-else if ( count[strlen(count) - 1 ] == 77 ||  count[strlen(count) - 1 ] == 109)
+else if ( count[strlen(count) - 1 ] == 77 ||  count[strlen(count) - 1 ] == 109)   //M or m prefix
    {
     count[strlen(count) - 1  ] = 0;
     val = 1000 * 1000;
   }
 else
   {
-    if( count[strlen(count) - 1] < 48 || count[strlen(count) - 1] > 57)
+    if( count[strlen(count) - 1] < 48 || count[strlen(count) - 1] > 57)    //Not a Number or K or M
    { printf("Unknown Prefix");
     return 0;
    }
