@@ -56,6 +56,7 @@ void split_by_lines( char* file , int num)
  fclose(outstream);
  }
 fclose(instream);
+printf("File split by lines successfully!");
 } // Function used to split the source file by number of lines
 
 
@@ -89,6 +90,7 @@ void split_by_size(char* file , int size)
   fclose(outstream);
  }
 fclose(instream);
+printf("File split by size successfully!");
 }// Function used to split the source file by size
 
 
