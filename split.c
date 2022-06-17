@@ -34,9 +34,9 @@ void split_by_lines( char* file , int num)
 {
  FILE *instream , *outstream ;
  instream = fopen(file , "r");
- int fno = 0;
+ int fno = 0;       //file number
  char filename[30];
- char temp[100];
+ char temp[100];     //line string
  if (instream == NULL)
  {
 	 printf("Unable to Open File");
@@ -65,9 +65,9 @@ void split_by_size(char* file , int size)
 
  FILE *instream , *outstream;
  instream = fopen(file , "r");
- int fno = 0;
+ int fno = 0;        //file number
  char filename[30];
- char temp;
+ char temp;          
  if (instream == NULL)
  {
 	 printf("Unable to Open File");
@@ -99,8 +99,7 @@ int main(int argc , char* argv[])
     if( strcmp(argv[2], "N") == 0|| strcmp(argv[2], "n") == 0)
        {
        int num = atoi(argv[3]);      //string to number of lines
-       split_by_lines( argv[1] , num );
-
+        split_by_lines( argv[1] , num );
           }
     else if (  strcmp(argv[2], "S") == 0 || strcmp(argv[2], "s") == 0 )
 	{
